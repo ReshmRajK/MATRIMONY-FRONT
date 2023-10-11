@@ -1,0 +1,31 @@
+<div class="p-5 container h-100 text-center">
+    <h1 class="mb-5">Edit Profile</h1>
+    <form (ngSubmit)="editProfile()" action="" class=" p-5 bg-body-tertiary"
+        style="box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+        <input [(ngModel)]="pData.r_address" type="text" name="address2" id="add2" class="form-control mt-2"
+            placeholder="Enter Address">
+        <input [(ngModel)]="pData.r_contact" type="text" name="contact3" id="c3" class="form-control mt-2"
+            placeholder="Enter Contact Number">
+        <input [(ngModel)]="pData.r_email" type="text" name="email4" id="e4" class="form-control mt-2"
+            placeholder="Enter Email id">
+        <input [(ngModel)]="pData.r_occupation" type="text" name="image3" id="img3" class="form-control mt-2"
+            placeholder="Enter URL Link">
+        <input [(ngModel)]="pData.r_salary" type="text" name="job" id="j1" class="form-control mt-2"
+            placeholder="Occupation">
+        <input [(ngModel)]="pData.r_image" type="text" name="salary2" id="s2" class="form-control mt-2"
+            placeholder="Salary">
+        <textarea [(ngModel)]="pData.r_description" name="desc" id="d1" cols="15" rows="5" class="mt-2 form-control"
+            placeholder="Description"></textarea>
+
+
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <button class="btn btn-outline-success">Update</button>
+
+        </div>
+
+    </form>
+</div>
+
+
+<!-- " -->

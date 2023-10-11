@@ -1,0 +1,108 @@
+<div>
+
+  <nav class="navbar navbar-expand-lg bg-black">
+    <div class="container-fluid">
+
+      <a class="navbar-brand ms-5 text-white fs-2 title " href="#">
+
+        <i class="fa-solid fa-handshake-angle fa-beat me-3"></i>Made for each other</a>
+      <button class="navbar-toggler bg-white ms-5 " type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="d-flex justify-content-end">
+        <div class="collapse navbar-collapse me-5" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-5">
+            <li class="nav-item">
+              <a class="nav-link text-white item fs-4  " aria-current="page" href="">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white item fs-4 " href="products/register">Register</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white item fs-4 " href="products/profile">Profile</a>
+            </li>
+
+            <li class="nav-item">
+              <a (click)="logOut()" class="nav-link text-white item fs-4 " href="">LogOut</a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img src="https://i.postimg.cc/50F7Crry/wedding1.jpg" class="d-block w-100" alt="..." height="400px">
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.postimg.cc/x8mG1ptW/wedding2.jpg" class="d-block w-100" alt="..." height="400px">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://i.postimg.cc/V6gQH4qP/wedding4.jpg" class="d-block w-100" alt="..." height="400px">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://i.postimg.cc/zfp0sQc7/wedding5.jpg" class="d-block w-100" alt="..." height="400px">
+      </div>
+      <div class="carousel-item ">
+        <img src="https://i.postimg.cc/qM8Ym14b/wedding6.jpg" class="d-block w-100" alt="..." height="400px">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="card mt-5 container w-100 p-5 border-0">
+    <div class="row mt-4 row_section" *ngFor="let i of allProfileArray">
+      <div class="col-lg-4 mt-3 ">
+        <img src={{i.r_image}} class="img-fluid rounded-start img_section" alt="...">
+      </div>
+      <div class="col-lg-8 ">
+        <div class="card-body text-center mt-5">
+          <h5 class="card-title">Name : {{i.r_username}}</h5>
+          <p class="card-text">Location : {{i.r_address}}</p>
+          <p class="card-text">Occupation : {{i.r_occupation}}</p>
+          <p class="card-text">Contact : {{i.r_contact}}</p>
+        </div>
+      </div>
+
+      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div class="text-center"><a class="btn btn-outline-warning text-dark mt-auto"
+            href="products/singleView/{{i.email}}">View More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="p-1 text-center bg-black">
+    <p class="text-white">copyrights @2000</p>
+    <div class="d-flex justify-content-center gap-5 text-white">
+      <i class="fa-brands fa-facebook fa-beat-fade fa-2x"></i>
+      <i class="fa-brands fa-instagram fa-beat-fade fa-2x"></i>
+      <i class="fa-brands fa-twitter fa-beat-fade fa-2x"></i>
+      <i class="fa-brands fa-whatsapp fa-beat-fade fa-2x"></i>
+      <i class="fa-solid fa-at fa-beat-fade fa-2x"></i>
+    </div>
+
+
+  </div>
+
+</div>

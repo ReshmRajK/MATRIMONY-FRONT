@@ -1,0 +1,13 @@
+.profile {
+    border-radius: 50%;
+    /* background-color: aqua; */
+    border: 4px solid black;
+}
+
+.image_section {
+    transition: 1s ease-in-out;
+}
+
+.image_section:hover {
+    transform: scale(1.1);
+}

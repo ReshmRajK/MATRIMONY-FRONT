@@ -1,0 +1,40 @@
+<section class="py-5">
+    <div class="container w-100 bg-white px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6 ">
+                <img class="card-img-top mb-5 mb-md-0 img_section" src={{pData.r_image}} alt="..." />
+            </div>
+            <div class="col-md-6 mt-5 text-capitalize align-items-center">
+                <h1 class="display-5 fw-bolder">Full Name : {{pData.r_username}}</h1>
+
+                <p class="fs-5 mt-3">Father Name : {{pData.r_father}}</p>
+                <p class="fs-5">Mother Name : {{pData.r_mother}}</p>
+                <p class="fs-5">Qualification : {{pData.r_qualification}}</p>
+                <p class="fs-5">Occupation : {{pData.r_occupation}}</p>
+                <p class="fs-5">Address : {{pData.r_address}}</p>
+                <p class="fs-5">Email : {{pData.r_email}}</p>
+                <p class="fs-5">Hobbies : {{pData.r_hobbies}}</p>
+
+                <ol>
+                    <li>Drinking or Smoking ? : {{pData.ques_1}}</li>
+                    <li class="mt-3">Are You Interested To Travel? : {{pData.ques_2}}</li>
+                    <li class="mt-3">Do You Know Cooking? : {{pData.ques_3}}</li>
+                    <li class="mt-3">Are You Pets Lover? : {{pData.ques_4}}</li>
+                    <li class="mt-3">what's Your Future Plan? : {{pData.ques_5}}</li>
+                    <li class="mt-3">Are You A Social Media Person? : {{pData.ques_6}}</li>
+                    <li class="mt-3">Are you willing to share and accept the responsibilities of both
+                        families? : {{pData.ques_7}}</li>
+                    <li class="mt-3">Are You Willing To Re-Locate? : {{pData.ques_8}}</li>
+                    <li class="mt-3">Are You Interested In Sports? : {{pData.ques_9}}</li>
+                    <li class="mt-3">Select Your Passion : {{pData.ques_10}}</li>
+                </ol>
+
+                <div class="mb-5 mt-3">
+                <a  href="products/home"><i class="fa-solid fa-house-user fa-flip me-2 fa-2x"></i>Back To Home</a>
+            </div>
+            <button *ngIf="deleteButtonShow" (click)="delete()" class="btn btn-outline-danger mb-5">Delete</button>
+
+            </div>
+        </div>
+    </div>
+</section>

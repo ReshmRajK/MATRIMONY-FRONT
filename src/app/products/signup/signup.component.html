@@ -1,0 +1,46 @@
+<div class="row" style="height: 100vh;">
+
+    <div class="col-lg-6 col-md-6 bg-body-tertiary">
+
+        <form [formGroup]="signUpModelForm" action="" class="bg-white p-5 mt-5 mx-5"
+            style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <h2 class="text-center">SignUp Form</h2>
+            <input formControlName="username" type="text" name="name" id="na1" class="form-control mt-3"
+                placeholder="Enter Your Name">
+            <p *ngIf="signUpModelForm.get('username')?.errors&&signUpModelForm.get('username')?.touched"
+                class="text-center text-danger">accepts letters only</p>
+            <input formControlName="contact" type="text" name="contact1" id="c1" class="form-control mt-2"
+                placeholder="Enter Your Contact Number">
+            <p *ngIf="signUpModelForm.get('contact')?.errors&&signUpModelForm.get('contact')?.touched"
+                class="text-center text-danger">accepts numbers only</p>
+
+            <input formControlName="image" type="text" name="image" id="img1" class="form-control mt-2"
+                placeholder="Enter URL Link">
+            <p *ngIf="signUpModelForm.get('image')?.errors && signUpModelForm.get('image')?.touched"
+                class="text-center text-danger">required</p>
+
+            <input formControlName="email" type="text" name="email1" id="e1" class="form-control mt-2"
+                placeholder="Enter Email">
+            <label *ngIf="signUpModelForm.get('email')?.errors&&signUpModelForm.get('email')?.touched"
+                class="text-center text-danger">required field</label>
+
+
+            <input formControlName="psw" type="password" name="pswd2" id="p2" class="form-control mt-2"
+                placeholder="Enter Password">
+            <p *ngIf="signUpModelForm.get('psw')?.errors&&signUpModelForm.get('psw')?.touched"
+                class="text-center text-danger">accept letters and numbers only </p>
+
+            <input formControlName="cpsw" type="password" name="cpswd1" id="cp1" class="form-control mt-2"
+                placeholder="Confirm Password">
+            <p *ngIf="pswMatch" class="text-center text-danger mt-2">password doesn't match</p>
+
+            <div class="d-flex justify-content-center">
+                <button (click)="signUp()" class="btn btn-success text-center mt-3 ">SignUp</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="image-section col-lg-6 col-md-6">
+    </div>
+</div>

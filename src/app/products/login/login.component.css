@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.image-section {
+    background-image: url('https://i.postimg.cc/26y23xGy/wedding.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

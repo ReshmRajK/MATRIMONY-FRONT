@@ -1,0 +1,23 @@
+<div class="card mt-5 container w-100 p-5 border-0">
+    <h1 class="text-center p-1 ms-5 me-5">Admin Section</h1>
+    <div class="row mt-4 row_section" *ngFor="let i of allProfileArray">
+      <div class="col-lg-4 mt-3 ">
+        <img src={{i.r_image}} class="img-fluid rounded-start img_section" alt="...">
+      </div>
+      <div class="col-lg-8 ">
+        <div class="card-body text-center mt-5">
+          <h5 class="card-title">Name : {{i.r_username}}</h5>
+          <p class="card-text">Location : {{i.r_address}}</p>
+          <p class="card-text">Occupation : {{i.r_occupation}}</p>
+          <p class="card-text">Contact : {{i.r_contact}}</p>
+        </div>
+      </div>
+
+      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div class="text-center"><a class="btn btn-outline-warning text-dark mt-auto"
+            href="products/singleView/{{i.email}}">View More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>

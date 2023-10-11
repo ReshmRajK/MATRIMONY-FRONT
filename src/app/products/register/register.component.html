@@ -1,0 +1,162 @@
+<div class=" mx-5" style="height: 100vh;">
+
+  <div class="container w-75 bg-body-tertiary form_section p-5">
+
+    <form [formGroup]="registrationForm">
+      <h1 class="text-center mt-5">Registration Form</h1>
+      <input formControlName="r_username" type="text" name="name2" id="na2" class="form-control mt-3"
+        placeholder="Enter Your Name">
+      <label *ngIf="registrationForm.get('r_username')?.errors && registrationForm.get('r_username')?.touched"
+        class="text-danger">accept letters only</label>
+
+      <input formControlName="r_dob" type="date" name="dob" id="dob1" class="form-control mt-2" placeholder="">
+      <label *ngIf="registrationForm.get('r_dob')?.errors && registrationForm.get('r_dob')?.touched"
+        class="text-danger">required</label><br>
+
+      <input formControlName="r_gender" value="male" type="radio" id="male" name="gender" class="ms-5 mt-3">
+        <label for="male">Male</label>
+        <input formControlName="r_gender" value="female" type="radio" id="female" name="gender" class="ms-4">
+        <label for="female">Female</label>
+
+      <input formControlName="r_cast" type="text" name="cast" id="cast1" class="form-control mt-2"
+        placeholder="Cast and Religion">
+      <label *ngIf="registrationForm.get('r_cast')?.errors && registrationForm.get('r_cast')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_father" type="text" name="father" id="fa1" class="form-control mt-2"
+        placeholder="Enter Your Father's Name">
+      <label *ngIf="registrationForm.get('r_father')?.errors && registrationForm.get('r_father')?.touched"
+        class="text-danger">accept letters only</label>
+
+      <input formControlName="r_mother" type="text" name="mother" id="ma1" class="form-control mt-2"
+        placeholder="Enter Your Mother's Name">
+      <label *ngIf="registrationForm.get('r_mother')?.errors && registrationForm.get('r_mother')?.touched"
+        class="text-danger">accept letters only</label>
+
+      <textarea formControlName="r_address" name="address" id="ad1" cols="10" rows="5" class="form-control mt-2"
+        placeholder="Enter Your Address"></textarea>
+      <label *ngIf="registrationForm.get('r_address')?.errors && registrationForm.get('r_address')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_qualification" type="text" name="quali" id="q1" class="form-control mt-2"
+        placeholder="Qualification">
+      <label *ngIf="registrationForm.get('r_qualification')?.errors && registrationForm.get('r_qualification')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_occupation" type="text" name="occu" id="oc1" class="form-control mt-2"
+        placeholder="Occupation">
+      <label *ngIf="registrationForm.get('r_occupation')?.errors && registrationForm.get('r_occupation')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_salary" type="text" name="salary" id="sal1" class="form-control mt-2"
+        placeholder="Salary">
+      <label *ngIf="registrationForm.get('r_salary')?.errors && registrationForm.get('r_salary')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_contact" type="text" name="contact2" id="c2" class="form-control mt-2"
+        placeholder="Contact Number">
+      <label *ngIf="registrationForm.get('r_contact')?.errors && registrationForm.get('r_contact')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_email" type="text" name="email3" id="e3" class="form-control mt-2" placeholder="Email">
+      <label *ngIf="registrationForm.get('r_email')?.errors && registrationForm.get('r_email')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_hobbies" type="text" name="hobbi" id="hb1" class="form-control mt-2"
+        placeholder="Hobbies">
+      <label *ngIf="registrationForm.get('r_hobbies')?.errors && registrationForm.get('r_hobbies')?.touched"
+        class="text-danger">required</label>
+
+      <input formControlName="r_image" type="text" name="image" id="img1" class="form-control mt-2"
+        placeholder="Image Url Link">
+      <label *ngIf="registrationForm.get('r_image')?.errors && registrationForm.get('r_image')?.touched"
+        class="text-danger">required</label>
+
+      <textarea formControlName="r_description" name="about" id="ab1" cols="15" rows="5" class="form-control mt-2"
+        placeholder="Write Something About You"></textarea>
+      <label *ngIf="registrationForm.get('r_description')?.errors && registrationForm.get('r_description')?.touched"
+        class="text-danger">required</label>
+
+
+
+      <h2 class="text-center mt-5 text-success">Something About You</h2>
+
+
+      <label for="cars" class="ms-1 fs-5">1.Drinking or Smoking? :</label>
+      <select formControlName="ques_1" name="drink" id="drink" class="ms-2 fs-5">
+        <option value="notDrink">Not-Drink</option>
+        <option value="notSmoke">Not-Smoke</option>
+        <option value="drinking">Drinking</option>
+        <option value="smoking">Smoking</option>
+        <option value="nothing">Nothing</option>
+        <option value="both">Both</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">2.Are You Interested To Travel? :</label>
+      <select formControlName="ques_2" name="travel" id="travel" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">3.Do You Know Cooking? :</label>
+      <select formControlName="ques_3" name="cook" id="cook" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">4.Are You Pets Lover? :</label>
+      <select formControlName="ques_4" name="pets" id="pets" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">5.what's Your Future Plan? :</label>
+      <select formControlName="ques_5" name="pets" id="pets" class="ms-2 fs-5">
+        <option value="higherStudies">Higher Studies</option>
+        <option value="working">Working</option>
+        <option value="business">Business</option>
+        <option value="Other">Other</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">6.Are You A Social Media Person? :</label>
+      <select formControlName="ques_6" name="social" id="social" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">7.Are you willing to share and accept the responsibilities of both
+        families? :</label>
+      <select formControlName="ques_7" name="family" id="fam" class="ms-5 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">8.Are You Willing To Re-Locate? :</label>
+      <select formControlName="ques_8" name="locate" id="locate" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">9.Are You Interested In Sports? :</label>
+      <select formControlName="ques_9" name="sports" id="sports" class="ms-2 fs-5">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select> <br>
+
+      <label for="cars" class="ms-1 fs-5 mt-4">10.Select Your Passion :</label>
+      <select formControlName="ques_10" name="passion" id="passion" class="ms-2 fs-5">
+        <option value="dancing">Dancing</option>
+        <option value="singing">Singing</option>
+        <option value="painting">Painting</option>
+        <option value="drawing">Drawing</option>
+        <option value="others">Others</option>
+      </select>
+      <div class="d-flex justify-content-center mt-5">
+        <button (click)="viewProfile()" class="btn btn-outline-primary">Register</button>
+
+      </div>
+    </form>
+
+  </div>
+
+</div>
